@@ -1,0 +1,20 @@
+{% extends "MoviePicker_base.html" %}
+
+{% block content %}
+
+<h1 id="readreviews">Read Reviews</h1>
+
+<table id="reviewtable">
+
+    {% for i in entry %}
+    <tr>
+        <td>{{ i.Name }}</td>
+        <td>{{ i.Title }}</td>
+        <td>{{ i.Rate }}</td>
+        <td><a href="{% url 'MoviePicker_details' i.id %}" class="btn">Details</a></td>
+    </tr>
+
+    {% endfor %}
+</table>
+
+{% endblock %}

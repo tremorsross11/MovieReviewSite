@@ -1,0 +1,12 @@
+{% extends "MoviePicker_base.html" %}
+
+{% block content %}
+<h1>Update Review</h1>
+<form method="POST">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<button type="submit" class="btn">Save Changes</button>
+</form>
+<button type="submit" class="btn"><a href="{% url 'MoviePicker_delete' item.id %}">Delete</a></button>
+<button type="submit" class="btn"><a href="{% url 'MoviePicker_details' item.id %}">Return</a></button>
+{% endblock %}

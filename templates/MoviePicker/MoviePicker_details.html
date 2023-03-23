@@ -1,0 +1,14 @@
+{% extends "MoviePicker_base.html" %}
+
+{% block content %}
+
+<h1 id="readreviews">Review Details</h1>
+<h5>{{ entrys.Name }} - {{ entrys.Title }} - {{ entrys.Rate }}</h5>
+<div id="entryreview">{{ entrys.Review }}</div>
+
+
+<button type="submit" class="btn"><a href="{% url 'MoviePicker_delete' entrys.id %}">Delete Review</a></button>
+<button type="submit" class="btn"><a href="{% url 'MoviePicker_update' entrys.id %}">Edit Review</a></button>
+<button type="submit" class="btn"><a href="{% url 'MoviePicker_view' %}">Back to Reviews</a></button>
+
+{% endblock %}
